@@ -1,0 +1,64 @@
+
+<form #sgnForm = "ngForm" (ngSubmit) = "onSubmit()">
+<div class="row">
+  <div class="input-field col s3">
+    <input  placeholder="Enter your email" id="email" type="email" class="validate"
+    id="email" 
+    ngModel 
+    name = "email"
+    email
+    class="form-control"
+    #email = "ngModel">  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s3">
+    <br>
+    <span class="help-lock" *ngIf = "!email.valid && email.touched">Please enter valid email!</span>
+  <br>
+  <input  id="password" type="password" class="validate"
+  id="password"
+  name="password"
+  ngModel
+  required
+  #password = "ngModel"
+  >
+  <br>
+  <span class="help-lock" *ngIf = "!password.valid && password.touched">Please enter valid password!</span>
+  </div>
+</div>
+
+<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+  <i class="material-icons right">Submit</i>
+</button>
+</form>
+
+<!-- <form #sgnForm = "ngForm" (ngSubmit) = "onSubmit()">
+  <div class="form-group">
+    <mat-form-field>
+    <input matInput placeholder="Enter your email" type="email" 
+    id="email" 
+    ngModel 
+    name = "email"
+    email
+    class="form-control"
+    #email = "ngModel"
+    >
+  </mat-form-field>
+  <br>
+    <span class="help-lock" *ngIf = "!email.valid && email.touched">Please enter valid email!</span>
+  <br>
+  <input type="password" 
+  id="password"
+  name="password"
+  ngModel
+  required
+  #password = "ngModel"
+  >
+  <br>
+  <span class="help-lock" *ngIf = "!password.valid && password.touched">Please enter valid password!</span>
+  <br>
+  
+</div>
+<button type="submit">Log In</button>
+</form> -->
